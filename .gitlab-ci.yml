@@ -1,0 +1,11 @@
+board_class:
+       variables:
+                UNITTEST: "board_test.py"
+        script:
+                - PYTHONPATH=. python3 $UNITTEST
+other:
+        variables:
+                UNITTEST: "other_test.py
+        script:
+                - PYTHONPATH=. python3 $UNITTEST
+
