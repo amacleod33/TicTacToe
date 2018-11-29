@@ -1,9 +1,6 @@
 import unittest
 from inspect import signature
-
 import board_class
-
-
 class MyTestCase(unittest.TestCase):
 
     def test_has_Board_class(self):

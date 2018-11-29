@@ -5,7 +5,7 @@ from get_nbr import get_nbr
 
 class TicTacToe:
     def __init__(self):
-        self.board = Board
+        self.board = Board()
     def get_player_char(self):
         x_or_o = input('Would you like to be X or O')
         while x_or_o is not 'x' and x_or_o is not 'X' and x_or_o is not 'o' and x_or_o is not 'O':
@@ -30,7 +30,7 @@ class TicTacToe:
     # do not change anything from here to the end
     def get_computer_spot(self):
         index = random.randint(0, self.board.nbr_of_unfilled_slots() - 1)
-        nbr = self.board.take_spot_at(index)
+        nbr = self.board.choose_spot_at(index)
         print('Computer chooses', nbr)
         return nbr
 
